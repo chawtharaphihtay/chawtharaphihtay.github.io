@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import { useState } from "react";
 import { projects, type Project } from "@/content/data";
+import { ProjectArt } from "./ProjectArt";
 import { Reveal } from "./Reveal";
 import { SectionHeading } from "./SectionHeading";
 
@@ -53,11 +54,7 @@ function ProjectRow({ project, index }: { project: Project; index: number }) {
           <div className="grid grid-cols-1 gap-8 pt-8 sm:grid-cols-12 sm:pt-10">
             <div className="sm:col-span-1" />
             <div className="sm:col-span-6">
-              <div className="aspect-[4/3] w-full rounded-2xl border border-line bg-paper-raised flex items-center justify-center">
-                <span className="font-mono text-[11px] uppercase tracking-wide text-ink-soft px-6 text-center">
-                  Preview image — add a screenshot of {project.name}
-                </span>
-              </div>
+              <ProjectArt variant={project.mock} />
             </div>
             <div className="sm:col-span-5 flex flex-col gap-5">
               <p className="text-sm text-ink-soft leading-relaxed">
@@ -91,6 +88,25 @@ function ProjectRow({ project, index }: { project: Project; index: number }) {
                   </span>
                 ))}
               </div>
+              {project.links && project.links.length > 0 && (
+                <div className="flex flex-wrap gap-4 pt-1">
+                  {project.links.map((link) => (
+                    <a
+                      key={link.href}
+                      href={link.href}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="group/link inline-flex items-center gap-1.5 font-mono text-[11px] uppercase tracking-wide text-accent hover:underline"
+                    >
+                      {link.label}
+                      <ArrowUpRight
+                        size={12}
+                        className="transition-transform group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5"
+                      />
+                    </a>
+                  ))}
+                </div>
+              )}
             </div>
           </div>
         </motion.div>

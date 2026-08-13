@@ -8,8 +8,8 @@ export function Experience() {
       <div className="container-edit">
         <SectionHeading
           eyebrow="Experience"
-          title="A changelog of roles."
-          description="Ordered the way a release history reads — newest at the top, each entry scoped to what actually shipped."
+          title="A record of work shipped."
+          description="Newest at the top — each role scoped to what actually made it to production."
         />
 
         <div className="mt-16 space-y-0">

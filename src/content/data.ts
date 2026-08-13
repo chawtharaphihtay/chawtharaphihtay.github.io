@@ -13,13 +13,13 @@ export const personal = {
   tagline:
     "I build full-stack web products and mobile apps with Laravel, Vue.js, React, and Next.js — then take them all the way to production.",
   heroStatement:
-    "Shipping web and mobile products end-to-end: from Laravel and Vue full-stack features to Nginx-deployed production builds. I care about stable, maintainable software that people actually enjoy using.",
+    "Shipping web and mobile products end-to-end: from full-stack features to production builds. I care about stable, maintainable software that people actually enjoy using.",
   resumeUrl: "/resume/chaw-tharaphi-htay-resume.pdf",
   availability: "Open to new opportunities · 1 month notice",
 };
 
 export const socials = {
-  github: "https://github.com/", // TODO: replace with your GitHub URL
+  github: "https://github.com/drine-kin", // TODO: replace with your GitHub URL
   linkedin: "https://linkedin.com/", // TODO: replace with your LinkedIn URL
   email: `mailto:${personal.email}`,
 };
@@ -36,6 +36,8 @@ export const nav = [
 // Selected work — derived from roles on the résumé. Replace description /
 // links / images with real case-study detail as it becomes available.
 // ---------------------------------------------------------------------------
+export type MockVariant = "medlab" | "mobile" | "ecommerce" | "dashboard" | "search";
+
 export type Project = {
   id: string;
   name: string;
@@ -47,13 +49,31 @@ export type Project = {
   outcome: string;
   tech: string[];
   links?: { label: string; href: string }[];
+  mock: MockVariant;
 };
 
 export const projects: Project[] = [
   {
+    id: "shwemin",
+    name: "Medical Lab Info Site",
+    year: "2026 — Present",
+    role: "Full-Stack Developer",
+    description:
+      "A medical laboratory information website backed by a custom CMS, so lab staff can manage content and data without touching code.",
+    problem:
+      "The lab needed a public information site whose content could be updated by non-technical staff, without waiting on developers.",
+    solution:
+      "Built the site with Laravel and a CMS admin panel using Filament, paired with an Inertia.js + React frontend for the public pages.",
+    outcome:
+      "A CMS-backed site where lab information stays accurate and current without developer involvement.",
+    tech: ["Laravel", "Filament", "Inertia.js", "React", "MySQL"],
+    links: [],
+    mock: "medlab",
+  },
+  {
     id: "loyalty-app",
     name: "Customer Loyalty App",
-    year: "2024 — Present",
+    year: "2024 — 2026",
     role: "React Native Developer",
     description:
       "A React Native mobile app that turns one-time shoppers into repeat customers through rewards and engagement features.",
@@ -63,8 +83,9 @@ export const projects: Project[] = [
       "Built a single cross-platform app with React Native CLI covering rewards tracking, promotions, and engagement flows, integrated with the existing customer backend.",
     outcome:
       "Shipped a production-ready loyalty experience that gives the business a direct, always-on channel to repeat customers.",
-    tech: ["React Native", "Redux", "REST APIs"],
+    tech: ["React Native", "Zustand"],
     links: [],
+    mock: "mobile",
   },
   {
     id: "ecommerce-platform",
@@ -81,12 +102,13 @@ export const projects: Project[] = [
       "Two live storefronts running in production, with a repeatable deploy process for future releases.",
     tech: ["Next.js", "Tailwind CSS", "Payments", "Nginx"],
     links: [],
+    mock: "ecommerce",
   },
   {
     id: "attendance-system",
     name: "Training Attendance Management System",
     year: "2024 — Present",
-    role: "Full-Stack Developer",
+    role: "Front-End Developer",
     description:
       "An internal system for managing training sessions, attendance, and resources with role-based dashboards.",
     problem:
@@ -95,8 +117,9 @@ export const projects: Project[] = [
       "Built the system on Vite with role-based dashboards, structured reporting views, and attendance tracking tailored to each role.",
     outcome:
       "Replaced manual tracking with a single system for scheduling, attendance, and reporting.",
-    tech: ["Vite", "React", "Role-based access"],
+    tech: ["Vite", "React", "Tailwind CSS"],
     links: [],
+    mock: "dashboard",
   },
   {
     id: "job-search-site",
@@ -111,8 +134,9 @@ export const projects: Project[] = [
       "Maintained and extended the site's UI on an ongoing basis, working from customer requirements to shipped features.",
     outcome:
       "A platform that keeps pace with customer needs through continuous, low-risk iteration.",
-    tech: ["Next.js", "React", "SEO"],
+    tech: ["React", "Material UI", "Redux"],
     links: [],
+    mock: "search",
   },
 ];
 
@@ -152,11 +176,9 @@ export const experience: ExperienceEntry[] = [
     end: "Jan 2026",
     location: "Yangon, Myanmar",
     achievements: [
-      "Built and maintained information-based websites using Next.js (App Router) with SEO-friendly structure and responsive UI.",
-      "Developed a customer loyalty mobile application using React Native CLI, supporting rewards, promotions, and engagement.",
-      "Maintained two eCommerce websites on Next.js (App Router), including payment integration.",
-      "Built a Training Attendance Management System with role-based dashboards, reports, and attendance tracking, using Vite.",
-      "Actively maintained a job search website, delivering UI updates and feature improvements based on customer requirements.",
+      "As part of a development team, built and maintained Next.js (App Router) websites, including SEO-friendly information sites, two eCommerce sites with payment integration, and a job search platform with ongoing UI feature updates.",
+      "Collaborated with a cross-functional team to develop a customer loyalty mobile application using React Native CLI, supporting rewards, promotions, and engagement.",
+      "Built a Training Attendance Management System with role-based dashboards, reports, and attendance tracking using Vite.",
       "Handled production deployment of Next.js websites, configuring Nginx reverse proxy and managing build updates and restarts.",
     ],
     tech: ["React", "Next.js", "React Native", "Vite", "Tailwind CSS", "Nginx"],
@@ -228,7 +250,7 @@ export const skillCategories: SkillCategory[] = [
   },
   {
     label: "Tooling & Ops",
-    skills: ["Git / GitHub", "Nginx", "Production Deployment", "Photoshop"],
+    skills: ["Git / GitHub", "Nginx", "Photoshop"],
   },
 ];
 

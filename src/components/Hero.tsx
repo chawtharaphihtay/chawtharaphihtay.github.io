@@ -3,7 +3,7 @@
 import { motion, type Variants } from "framer-motion";
 import { ArrowDownRight, ArrowUpRight } from "lucide-react";
 import { personal } from "@/content/data";
-import { NodeGraph } from "./NodeGraph";
+import { Avatar } from "./Avatar";
 
 const EASE_OUT = [0.22, 1, 0.36, 1] as const;
 
@@ -86,7 +86,7 @@ export function Hero() {
           </div>
 
           <motion.div variants={item} className="lg:col-span-5">
-            <NodeGraph />
+            <Avatar />
           </motion.div>
         </motion.div>
       </div>

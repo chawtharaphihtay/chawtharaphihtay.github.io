@@ -4,8 +4,9 @@ import { Reveal } from "./Reveal";
 
 const links = [
   { label: "Email", value: personal.email, href: socials.email },
+  { label: "Phone", value: personal.phone, href: `tel:${personal.phone}` },
   { label: "GitHub", value: "github.com", href: socials.github },
-  { label: "LinkedIn", value: "linkedin.com", href: socials.linkedin },
+  // { label: "LinkedIn", value: "linkedin.com", href: socials.linkedin },
   { label: "Résumé", value: "Download PDF", href: personal.resumeUrl },
 ];
 

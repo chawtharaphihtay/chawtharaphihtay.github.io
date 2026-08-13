@@ -15,28 +15,25 @@ export function About() {
             <Reveal delay={0.05}>
               <div className="space-y-6 text-lg leading-relaxed text-ink-soft sm:text-xl">
                 <p>
-                  I started out customizing WordPress themes and writing
-                  Golang APIs — work that taught me how a codebase behaves
-                  once someone else has to live inside it. Since then I&apos;ve
-                  moved into React, Next.js, and React Native, but that early
-                  habit stuck: I still care as much about how a system holds
-                  up in production as how it looks on day one.
+                  I started out customizing WordPress themes — work that
+                  taught me how a codebase behaves once someone else has to
+                  live inside it. Since then I&apos;ve moved into React,
+                  Next.js, and React Native, but that early habit stuck: I
+                  care as much about how a system holds up in production as
+                  how it looks on day one.
                 </p>
                 <p>
-                  Most of what I build lives at the intersection of two
-                  things a business actually needs: a front end people enjoy
-                  using, and a deployment process the team can trust. That&apos;s
-                  meant everything from role-based dashboards to loyalty apps
-                  to configuring the Nginx reverse proxy that keeps a site
-                  running after I hand it off.
+                  Most of what I build lives at the intersection of what a
+                  business actually needs: a front end people enjoy using and
+                  a deployment process the team can trust — role-based
+                  dashboards, loyalty apps, and the Nginx setup that keeps a
+                  site running after handoff.
                 </p>
                 <p>
                   I&apos;m drawn to problems with a clear before-and-after — a
-                  manual spreadsheet replaced with a real system, a
-                  storefront that used to break at checkout, a mobile app
-                  that turns first-time buyers into regulars. Outside of
-                  work, I&apos;m usually the one still reading the framework
-                  changelog after everyone else has moved on.
+                  spreadsheet replaced with a real system, a storefront that
+                  used to break at checkout, a mobile app that turns
+                  first-time buyers into regulars.
                 </p>
               </div>
             </Reveal>
