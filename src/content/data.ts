@@ -19,7 +19,7 @@ export const personal = {
 };
 
 export const socials = {
-  github: "https://github.com/drine-kin", // TODO: replace with your GitHub URL
+  github: "https://github.com/chawtharaphihtay", // TODO: replace with your GitHub URL
   linkedin: "https://linkedin.com/", // TODO: replace with your LinkedIn URL
   email: `mailto:${personal.email}`,
 };
