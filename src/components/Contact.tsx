@@ -33,7 +33,7 @@ export function Contact() {
         <Reveal delay={0.1}>
           <a
             href={socials.email}
-            className="group mt-12 inline-flex items-baseline gap-3 whitespace-nowrap font-display text-2xl sm:text-4xl border-b border-ink pb-2 hover:text-accent hover:border-accent transition-colors"
+            className="group mt-12 inline-flex items-baseline gap-3 break-all font-display text-2xl sm:text-4xl border-b border-ink pb-2 hover:text-accent hover:border-accent transition-colors"
           >
             {personal.email}
             <ArrowUpRight

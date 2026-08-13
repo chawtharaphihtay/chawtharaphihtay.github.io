@@ -3,7 +3,7 @@ import { personal } from "@/content/data";
 export function Avatar() {
   return (
     <div className="relative mx-auto w-auto max-w-full">
-      <div className="relative aspect-square h-[52vh] max-h-[560px] w-auto overflow-hidden rounded-3xl border border-line bg-paper-raised">
+      <div className="relative aspect-square md:h-[52vh] max-h-[560px] w-auto overflow-hidden rounded-3xl border border-line bg-paper-raised">
         <div
           className="pointer-events-none absolute inset-0"
           style={{
