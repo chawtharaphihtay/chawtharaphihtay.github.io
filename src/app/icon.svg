@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <style>
+    .bg { fill: #c98a25; }
+    .fg { fill: #ffffff; }
+    @media (prefers-color-scheme: dark) {
+      .bg { fill: #f0b84a; }
+    }
+  </style>
+  <rect class="bg" width="64" height="64" rx="14" />
+  <text class="fg" x="32" y="32" font-family="'Space Grotesk','Avenir Next',Arial,sans-serif" font-size="34" font-weight="600" text-anchor="middle" dominant-baseline="central">C</text>
+</svg>

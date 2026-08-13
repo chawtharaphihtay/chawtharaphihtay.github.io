@@ -50,9 +50,10 @@ currently placeholders.
 
 ### Domain / SEO
 
-`src/app/layout.tsx`, `src/app/sitemap.ts`, and `src/app/robots.ts` all
-reference a placeholder domain (`https://chawtharaphihtay.dev`). Replace it
-with your real domain once you have one.
+`src/app/layout.tsx` uses `https://chawtharaphihtay.github.io` as the
+site URL; the static `public/robots.txt` and `public/sitemap.xml` mirror
+it. Update all three if the site is ever served from a different domain
+or a subpath like `https://chawtharaphihtay.github.io/portfolio`.
 
 ## Structure
 

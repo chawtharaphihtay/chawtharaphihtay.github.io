@@ -255,37 +255,6 @@ export const skillCategories: SkillCategory[] = [
 ];
 
 // ---------------------------------------------------------------------------
-// Philosophy — a genuine sequence: how a piece of work moves from request to
-// shipped feature, drawn from the deployment + iteration pattern on the résumé.
-// ---------------------------------------------------------------------------
-export const philosophy = [
-  {
-    step: "01",
-    title: "Understand the request",
-    description:
-      "Start from what the customer or team actually needs, not the first technical solution that comes to mind.",
-  },
-  {
-    step: "02",
-    title: "Build with the team",
-    description:
-      "Work closely with leads and teammates, following shared practices so the codebase stays stable as it grows.",
-  },
-  {
-    step: "03",
-    title: "Ship it to production",
-    description:
-      "Take the feature all the way through deployment — build, restart, verify — not just to a pull request.",
-  },
-  {
-    step: "04",
-    title: "Maintain and iterate",
-    description:
-      "Keep improving based on real usage and feedback, the same way a site or app is maintained long after launch.",
-  },
-];
-
-// ---------------------------------------------------------------------------
 // Education & certificates
 // ---------------------------------------------------------------------------
 export const education = {

@@ -23,7 +23,7 @@ const jetbrainsMono = JetBrains_Mono({
   display: "swap",
 });
 
-const siteUrl = "https://chawtharaphihtay.dev"; // TODO: replace with your real domain
+const siteUrl = "https://chawtharaphihtay.github.io";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),

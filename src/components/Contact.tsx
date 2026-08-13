@@ -14,7 +14,7 @@ export function Contact() {
   return (
     <section
       id="contact"
-      className="py-28 sm:py-36 border-t border-line relative overflow-hidden"
+      className="py-28 sm:py-36 border-t border-line relative"
     >
       <div className="container-edit relative">
         <Reveal>
@@ -33,7 +33,7 @@ export function Contact() {
         <Reveal delay={0.1}>
           <a
             href={socials.email}
-            className="group mt-12 inline-flex items-baseline gap-3 font-display text-2xl sm:text-4xl border-b border-ink pb-2 hover:text-accent hover:border-accent transition-colors"
+            className="group mt-12 inline-flex items-baseline gap-3 whitespace-nowrap font-display text-2xl sm:text-4xl border-b border-ink pb-2 hover:text-accent hover:border-accent transition-colors"
           >
             {personal.email}
             <ArrowUpRight
@@ -44,19 +44,19 @@ export function Contact() {
         </Reveal>
 
         <Reveal delay={0.15}>
-          <div className="mt-16 grid grid-cols-2 gap-8 sm:grid-cols-4 border-t border-line pt-10">
+          <div className="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4 border-t border-line pt-10">
             {links.map((l) => (
               <a
                 key={l.label}
                 href={l.href}
                 target={l.href.startsWith("http") ? "_blank" : undefined}
                 rel={l.href.startsWith("http") ? "noreferrer" : undefined}
-                className="group flex flex-col gap-1"
+                className="group flex flex-col gap-1 min-w-0"
               >
                 <span className="font-mono text-[11px] uppercase tracking-wide text-ink-soft">
                   {l.label}
                 </span>
-                <span className="text-sm group-hover:text-accent transition-colors flex items-center gap-1">
+                <span className="text-sm group-hover:text-accent transition-colors flex items-center gap-1 whitespace-nowrap">
                   {l.value}
                   <ArrowUpRight
                     size={12}
