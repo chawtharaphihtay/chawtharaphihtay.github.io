@@ -1,0 +1,116 @@
+@import "tailwindcss";
+
+:root {
+  --paper: #f1f2f6;
+  --paper-raised: #e9ebf1;
+  --ink: #12141b;
+  --ink-soft: #4c5875;
+  --line: rgba(18, 20, 27, 0.12);
+  --line-strong: rgba(18, 20, 27, 0.28);
+  --accent: #c98a25;
+  --accent-soft: rgba(201, 138, 37, 0.14);
+
+  --font-display: var(--font-space-grotesk, "Space Grotesk"), "Avenir Next",
+    "Helvetica Neue", Arial, sans-serif;
+  --font-body: var(--font-inter, "Inter"), "Segoe UI", system-ui, -apple-system,
+    sans-serif;
+  --font-mono: var(--font-jetbrains-mono, "JetBrains Mono"), "SF Mono",
+    "Roboto Mono", ui-monospace, monospace;
+}
+
+:root[data-theme="dark"] {
+  --paper: #0e0f14;
+  --paper-raised: #16181f;
+  --ink: #edeef2;
+  --ink-soft: #9aa3b8;
+  --line: rgba(237, 238, 242, 0.14);
+  --line-strong: rgba(237, 238, 242, 0.3);
+  --accent: #f0b84a;
+  --accent-soft: rgba(240, 184, 74, 0.14);
+}
+
+@theme inline {
+  --color-paper: var(--paper);
+  --color-paper-raised: var(--paper-raised);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+  --font-display: var(--font-display);
+  --font-body: var(--font-body);
+  --font-mono: var(--font-mono);
+}
+
+* {
+  border-color: var(--line);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--paper);
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-mono {
+  font-family: var(--font-mono);
+}
+
+.container-edit {
+  width: 100%;
+  max-width: 1280px;
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .container-edit {
+    padding-inline: 2.5rem;
+  }
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+/* subtle grain / texture, purely decorative */
+.grain::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  mix-blend-mode: overlay;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
