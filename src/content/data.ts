@@ -9,7 +9,7 @@ export const personal = {
   role: "Full-Stack Developer",
   location: "Yangon, Myanmar",
   email: "chawtharaphihtay462@gmail.com",
-  phone: "09971025162",
+  phone: "+95 9971025162",
   tagline:
     "I build full-stack web products and mobile apps with Laravel, Vue.js, React, and Next.js — then take them all the way to production.",
   heroStatement:
@@ -19,7 +19,7 @@ export const personal = {
 };
 
 export const socials = {
-  github: "https://github.com/chawtharaphihtay", // TODO: replace with your GitHub URL
+  github: "https://github.com/chawtharaphihtay",
   linkedin: "https://linkedin.com/", // TODO: replace with your LinkedIn URL
   email: `mailto:${personal.email}`,
 };
@@ -56,7 +56,7 @@ export const projects: Project[] = [
   {
     id: "shwemin",
     name: "Medical Lab Info Site",
-    year: "2026 — Present",
+    year: "2026 – Present",
     role: "Full-Stack Developer",
     description:
       "A medical laboratory information website backed by a custom CMS, so lab staff can manage content and data without touching code.",
@@ -73,7 +73,7 @@ export const projects: Project[] = [
   {
     id: "loyalty-app",
     name: "Customer Loyalty App",
-    year: "2024 — 2026",
+    year: "2024 – 2026",
     role: "React Native Developer",
     description:
       "A React Native mobile app that turns one-time shoppers into repeat customers through rewards and engagement features.",
@@ -173,13 +173,17 @@ export const experience: ExperienceEntry[] = [
     company: "Myanmar Software Integrated Solutions",
     role: "React / React Native Developer",
     start: "Feb 2024",
-    end: "Jan 2026",
+    end: "Feb 2026",
     location: "Yangon, Myanmar",
     achievements: [
-      "As part of a development team, built and maintained Next.js (App Router) websites, including SEO-friendly information sites, two eCommerce sites with payment integration, and a job search platform with ongoing UI feature updates.",
-      "Collaborated with a cross-functional team to develop a customer loyalty mobile application using React Native CLI, supporting rewards, promotions, and engagement.",
-      "Built a Training Attendance Management System with role-based dashboards, reports, and attendance tracking using Vite.",
-      "Handled production deployment of Next.js websites, configuring Nginx reverse proxy and managing build updates and restarts.",
+      "Built and maintained information-based websites using Next.js (App Router) with SEO-friendly structure and responsive UI.",
+      "Developed a customer loyalty mobile application using React Native CLI, supporting rewards, promotions, and engagement features.",
+      "Maintained two eCommerce websites on Next.js (App Router), including payment integration.",
+      "Built a Training Attendance Management System with role-based dashboards, reports, and attendance tracking, using Vite.",
+      "Actively maintained a job search website, delivering UI updates and feature improvements based on customer requirements.",
+        "Improved front-end load times by implementing code-splitting and lazy loading in Vite, optimizing image assets, and reducing overall JavaScript bundle size.",
+      "Collaborated with team lead and team members to follow best practices and improve application stability and maintainability.",
+      "Handled production deployment of Next.js websites, configuring Nginx reverse proxy and managing build updates and service restarts.",
     ],
     tech: ["React", "Next.js", "React Native", "Vite", "Tailwind CSS", "Nginx"],
   },
@@ -194,7 +198,7 @@ export const experience: ExperienceEntry[] = [
       "Customized PHP-based themes and templates to meet project requirements and improve functionality.",
       "Edited and optimized images for websites using Photoshop to improve visual appeal and performance.",
     ],
-    tech: ["WordPress", "WooCommerce", "PHP", "Photoshop"],
+    tech: ["WordPress", "WooCommerce", "PHP"],
   },
   {
     company: "CDE Co., Ltd (Galaxie AI)",
@@ -250,7 +254,7 @@ export const skillCategories: SkillCategory[] = [
   },
   {
     label: "Tooling & Ops",
-    skills: ["Git / GitHub", "Nginx", "Photoshop"],
+    skills: ["Git / GitHub", "Nginx"],
   },
 ];
 
@@ -265,7 +269,7 @@ export const education = {
 };
 
 export const certificates = [
-  { name: "IT Passport", year: "2015" },
+  { name: "IT Passport Certificate", year: "2015" },
   { name: "Rockstar Developer Course", year: "2023" },
 ];
 

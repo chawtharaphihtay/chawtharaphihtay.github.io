@@ -49,7 +49,7 @@ export function Contact() {
               <a
                 key={l.label}
                 href={l.href}
-                target={l.href.startsWith("http") ? "_blank" : undefined}
+                target={l.href.startsWith("http") || l.href.startsWith('/resume') ? "_blank" : undefined}
                 rel={l.href.startsWith("http") ? "noreferrer" : undefined}
                 className="group flex flex-col gap-1 min-w-0"
               >

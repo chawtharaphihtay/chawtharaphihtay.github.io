@@ -74,6 +74,7 @@ export function Hero() {
               </a>
               <a
                 href={personal.resumeUrl}
+                target="_blank"
                 className="group inline-flex items-center gap-2 rounded-full border border-line-strong px-6 py-3 font-mono text-xs uppercase tracking-wide transition-colors hover:border-ink"
               >
                 Download résumé
