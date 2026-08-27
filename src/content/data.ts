@@ -11,7 +11,7 @@ export const personal = {
   email: "chawtharaphihtay462@gmail.com",
   phone: "+95 9971025162",
   tagline:
-    "I build full-stack web products and mobile apps with Laravel, Vue.js, React, and Next.js — then take them all the way to production.",
+    "I build full-stack web products and mobile apps with Laravel, React, and Next.js — then take them all the way to production.",
   heroStatement:
     "Full-stack React and Laravel developer who ships production-ready web and mobile apps — from first commit to deployment.",
   resumeUrl: "/resume/chaw-tharaphi-htay-resume.pdf",
