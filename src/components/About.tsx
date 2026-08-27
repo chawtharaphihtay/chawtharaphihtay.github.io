@@ -20,7 +20,7 @@ export function About() {
                 </p>
                 <p>
                   I enjoy turning ideas and manual processes into simple,
-                  practical systems—from dashboards and storefronts to mobile
+                  practical systems — from dashboards and storefronts to mobile
                   apps.
                 </p>
               </div>
