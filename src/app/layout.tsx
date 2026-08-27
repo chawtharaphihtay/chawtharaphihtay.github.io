@@ -48,11 +48,24 @@ export const metadata: Metadata = {
     title: `${personal.name} — ${personal.role}`,
     description: personal.tagline,
     siteName: personal.name,
+    images: [
+      {
+        url: "/og.svg",
+        width: 1200,
+        height: 630,
+        alt: `${personal.name} — ${personal.role}`,
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: `${personal.name} — ${personal.role}`,
     description: personal.tagline,
+    images: ["/og.svg"],
+  },
+  icons: {
+    icon: "/icon.svg",
+    apple: "/icon.svg",
   },
   robots: {
     index: true,
@@ -84,10 +97,21 @@ export default function RootLayout({
             `,
           }}
         />
+        <script
+          defer
+          src="https://cloud.umami.is/script.js"
+          data-website-id="355f556b-97e1-4c96-b878-75c7133315cd"
+        />
       </head>
       <body
         className={`${spaceGrotesk.variable} ${inter.variable} ${jetbrainsMono.variable} antialiased`}
       >
+        <a
+          href="#top"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:rounded-full focus:bg-ink focus:px-4 focus:py-2 focus:text-paper focus:outline-2 focus:outline-accent"
+        >
+          Skip to content
+        </a>
         {children}
       </body>
     </html>

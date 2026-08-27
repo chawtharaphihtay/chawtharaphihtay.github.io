@@ -22,7 +22,7 @@ export function Contact() {
             Contact
           </p>
           <h2 className="font-display text-4xl sm:text-6xl tracking-tight text-balance max-w-3xl">
-            Let's build something useful.
+            Let&apos;s build something useful.
           </h2>
           <p className="mt-6 max-w-xl text-lg text-ink-soft leading-relaxed">
             I&apos;m {personal.availability.toLowerCase()}. Tell me what

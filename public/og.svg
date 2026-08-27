@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0e0f14"/>
+      <stop offset="100%" stop-color="#16181f"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#f0b84a"/>
+      <stop offset="100%" stop-color="#c98a25"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- Accent bar top -->
+  <rect x="0" y="0" width="1200" height="4" fill="url(#accent)"/>
+
+  <!-- Subtle dot grid pattern -->
+  <pattern id="dots" x="0" y="0" width="30" height="30" patternUnits="userSpaceOnUse">
+    <circle cx="1" cy="1" r="0.8" fill="rgba(237,238,242,0.06)"/>
+  </pattern>
+  <rect width="1200" height="630" fill="url(#dots)"/>
+
+  <!-- Accent circle decoration -->
+  <circle cx="950" cy="150" r="180" fill="rgba(240,184,74,0.06)"/>
+  <circle cx="950" cy="150" r="120" fill="rgba(240,184,74,0.04)"/>
+
+  <!-- Initials badge -->
+  <rect x="100" y="160" width="72" height="72" rx="36" fill="none" stroke="rgba(237,238,242,0.2)" stroke-width="1.5"/>
+  <text x="136" y="208" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="22" font-weight="500" fill="rgba(237,238,242,0.7)" letter-spacing="1">CTH</text>
+
+  <!-- Name -->
+  <text x="100" y="310" font-family="system-ui, -apple-system, sans-serif" font-size="64" font-weight="700" fill="#edeef2" letter-spacing="-1">Chaw Tharaphi Htay</text>
+
+  <!-- Role -->
+  <text x="100" y="370" font-family="system-ui, -apple-system, sans-serif" font-size="26" font-weight="400" fill="#f0b84a" letter-spacing="3">FULL-STACK DEVELOPER</text>
+
+  <!-- Tagline -->
+  <text x="100" y="430" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="400" fill="rgba(154,163,184,0.9)">React · Next.js · Laravel · React Native</text>
+
+  <!-- Bottom accent bar -->
+  <rect x="100" y="560" width="80" height="3" rx="1.5" fill="url(#accent)"/>
+
+  <!-- URL -->
+  <text x="100" y="595" font-family="monospace" font-size="14" fill="rgba(154,163,184,0.5)" letter-spacing="1">chawtharaphihtay.github.io</text>
+</svg>
