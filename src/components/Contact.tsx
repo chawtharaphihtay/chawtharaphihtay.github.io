@@ -21,8 +21,8 @@ export function Contact() {
           <p className="font-mono text-xs uppercase tracking-[0.2em] text-accent mb-6">
             Contact
           </p>
-          <h2 className="font-display text-4xl sm:text-6xl lg:text-7xl tracking-tight text-balance max-w-3xl">
-            Have an idea worth building?
+          <h2 className="font-display text-4xl sm:text-6xl tracking-tight text-balance max-w-3xl">
+            Let's build something useful.
           </h2>
           <p className="mt-6 max-w-xl text-lg text-ink-soft leading-relaxed">
             I&apos;m {personal.availability.toLowerCase()}. Tell me what

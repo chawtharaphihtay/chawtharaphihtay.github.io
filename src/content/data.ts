@@ -13,7 +13,7 @@ export const personal = {
   tagline:
     "I build full-stack web products and mobile apps with Laravel, Vue.js, React, and Next.js — then take them all the way to production.",
   heroStatement:
-    "Shipping web and mobile products end-to-end: from full-stack features to production builds. I care about stable, maintainable software that people actually enjoy using.",
+    "Full-stack React and Laravel developer who ships production-ready web and mobile apps — from first commit to deployment.",
   resumeUrl: "/resume/chaw-tharaphi-htay-resume.pdf",
   availability: "Open to new opportunities · 1 month notice",
 };
@@ -97,7 +97,7 @@ export const projects: Project[] = [
     problem:
       "The stores needed fast, SEO-friendly storefronts with reliable payment integration and a deployment process the team could repeat.",
     solution:
-      "Implemented the storefronts with Next.js App Router and Tailwind CSS, wired up payment integration, and configured Nginx as a reverse proxy for production builds and restarts.",
+      "Implemented the storefronts with Next.js App Router and Tailwind CSS, wired up payment integration.",
     outcome:
       "Two live storefronts running in production, with a repeatable deploy process for future releases.",
     tech: ["Next.js", "Tailwind CSS", "Payments", "Nginx"],
@@ -161,13 +161,10 @@ export const experience: ExperienceEntry[] = [
     end: "Present",
     location: "Yangon, Myanmar",
     achievements: [
-      "Developed end-to-end full-stack features using Laravel, Vue.js, Inertia.js, Filament, REST APIs, and relational databases, covering backend services, frontend interfaces, and administration.",
-      "Designed and implemented reusable CRUD, CMS, reporting, filtering, pagination, and data-management modules for multiple business applications.",
-      "Built and integrated RESTful APIs with frontend applications, implementing validation, business logic, file management, and error handling.",
-      "Developed responsive web interfaces and resolved cross-device UI/UX and functional issues, ensuring consistent experiences across desktop and mobile.",
-      "Managed features across multiple projects from backend implementation through frontend integration, testing, bug fixing, code quality improvements, and deployment.",
+      "Maintained and extended warehouse management system, wedding planner admin panel, and medical laboratory information site using React, Filament and Laravel.",
+      "Resolved cross-device UI/UX issues and improved application performance across desktop and mobile.",
     ],
-    tech: ["Laravel", "Vue.js", "Inertia.js", "Filament", "REST APIs", "MySQL"],
+    tech: ["React", "Laravel", "Filament", "TanStack Query", "MySQL"],
   },
   {
     company: "Myanmar Software Integrated Solutions",
@@ -176,16 +173,10 @@ export const experience: ExperienceEntry[] = [
     end: "Feb 2026",
     location: "Yangon, Myanmar",
     achievements: [
-      "Built and maintained information-based websites using Next.js (App Router) with SEO-friendly structure and responsive UI.",
-      "Developed a customer loyalty mobile application using React Native CLI, supporting rewards, promotions, and engagement features.",
-      "Maintained two eCommerce websites on Next.js (App Router), including payment integration.",
-      "Built a Training Attendance Management System with role-based dashboards, reports, and attendance tracking, using Vite.",
-      "Actively maintained a job search website, delivering UI updates and feature improvements based on customer requirements.",
-        "Improved front-end load times by implementing code-splitting and lazy loading in Vite, optimizing image assets, and reducing overall JavaScript bundle size.",
-      "Collaborated with team lead and team members to follow best practices and improve application stability and maintainability.",
-      "Handled production deployment of Next.js websites, configuring Nginx reverse proxy and managing build updates and service restarts.",
+      "Developed 5+ production apps — eCommerce platforms, a loyalty app, and a training management system — using Next.js and React Native.",
+      "Optimized front-end performance with code-splitting, lazy loading, and asset optimization in Vite.",
     ],
-    tech: ["React", "Next.js", "React Native", "Vite", "Tailwind CSS", "Nginx"],
+    tech: ["React", "Next.js", "React Native", "Vite", "Tailwind CSS"],
   },
   {
     company: "World Wide Myanmar Co., Ltd",
@@ -194,9 +185,8 @@ export const experience: ExperienceEntry[] = [
     end: "Jan 2024",
     location: "Yangon, Myanmar",
     achievements: [
-      "Developed and customized WordPress websites under senior guidance, integrating WooCommerce and essential plugins.",
-      "Customized PHP-based themes and templates to meet project requirements and improve functionality.",
-      "Edited and optimized images for websites using Photoshop to improve visual appeal and performance.",
+      "Built and customized WordPress sites with WooCommerce, PHP themes, and plugin integrations.",
+      "Optimized images and site assets using Photoshop to improve load times and visual quality.",
     ],
     tech: ["WordPress", "WooCommerce", "PHP"],
   },
@@ -207,9 +197,8 @@ export const experience: ExperienceEntry[] = [
     end: "May 2020",
     location: "Yangon, Myanmar",
     achievements: [
-      "Collaborated with the team to modify and enhance existing APIs built in Golang to meet project requirements.",
-      "Restructured an application service API with Golang, working closely with senior engineers and a UI engineer to ship new features.",
-      "Wrote clear technical documentation of API changes and service components for smooth knowledge transfer.",
+      "Restructured and enhanced Golang APIs, shipping new features in collaboration with senior engineers.",
+      "Documented API changes and service components for smooth knowledge transfer.",
     ],
     tech: ["Golang", "REST APIs"],
   },
@@ -220,8 +209,8 @@ export const experience: ExperienceEntry[] = [
     end: "Aug 2019",
     location: "Yangon, Myanmar",
     achievements: [
-      "Collected requirements and implemented the setup module for a Point of Sale (POS) system.",
-      "Developed a Travel & Tour demo project using HTML, CSS, JavaScript, Bootstrap, PHP, and MySQL.",
+      "Implemented the setup module for a Point of Sale (POS) system from collected requirements.",
+      "Built a Travel & Tour demo project with PHP, MySQL, and Bootstrap.",
     ],
     tech: ["PHP", "MySQL", "Bootstrap"],
   },
@@ -238,23 +227,15 @@ export type SkillCategory = {
 export const skillCategories: SkillCategory[] = [
   {
     label: "Frontend",
-    skills: ["React.js", "Next.js (App Router)", "Vue.js", "Vite", "TypeScript", "Tailwind CSS"],
+    skills: ["React", "React Native", "Next.js", "Tailwind CSS", "TypeScript"],
   },
   {
     label: "State & Data",
-    skills: ["Redux", "Zustand", "React Context API", "Inertia.js", "REST APIs"],
+    skills: ["Zustand", "Redux", "TanStack Query"],
   },
   {
-    label: "Mobile",
-    skills: ["React Native", "React Native CLI"],
-  },
-  {
-    label: "CMS & Server-Side",
-    skills: ["Laravel", "Filament", "WordPress", "WooCommerce", "PHP"],
-  },
-  {
-    label: "Tooling & Ops",
-    skills: ["Git / GitHub", "Nginx"],
+    label: "Backend",
+    skills: ["Laravel", "Filament", "PHP", "MySQL"],
   },
 ];
 

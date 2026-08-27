@@ -8,32 +8,20 @@ export function About() {
       <div className="container-edit">
         <div className="grid grid-cols-1 gap-16 lg:grid-cols-12">
           <div className="lg:col-span-4">
-            <SectionHeading eyebrow="About" title="How I got here." />
+            <SectionHeading eyebrow="About" title="What I do." />
           </div>
 
           <div className="lg:col-span-8">
             <Reveal delay={0.05}>
               <div className="space-y-6 text-lg leading-relaxed text-ink-soft sm:text-xl">
                 <p>
-                  I started out customizing WordPress themes — work that
-                  taught me how a codebase behaves once someone else has to
-                  live inside it. Since then I&apos;ve moved into React,
-                  Next.js, and React Native, but that early habit stuck: I
-                  care as much about how a system holds up in production as
-                  how it looks on day one.
+                  I work with React, Next.js, React Native, and Laravel to
+                  build reliable web and mobile products.
                 </p>
                 <p>
-                  Most of what I build lives at the intersection of what a
-                  business actually needs: a front end people enjoy using and
-                  a deployment process the team can trust — role-based
-                  dashboards, loyalty apps, and the Nginx setup that keeps a
-                  site running after handoff.
-                </p>
-                <p>
-                  I&apos;m drawn to problems with a clear before-and-after — a
-                  spreadsheet replaced with a real system, a storefront that
-                  used to break at checkout, a mobile app that turns
-                  first-time buyers into regulars.
+                  I enjoy turning ideas and manual processes into simple,
+                  practical systems—from dashboards and storefronts to mobile
+                  apps.
                 </p>
               </div>
             </Reveal>
