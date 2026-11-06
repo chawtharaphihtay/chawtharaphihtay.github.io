@@ -7,26 +7,17 @@ import { nav, personal } from "@/content/data";
 import { ThemeToggle } from "./ThemeToggle";
 
 export function Nav() {
-  const [hidden, setHidden] = useState(false);
   const [raised, setRaised] = useState(false);
   const [open, setOpen] = useState(false);
   const { scrollY } = useScroll();
-  const [lastY, setLastY] = useState(0);
 
   useMotionValueEvent(scrollY, "change", (y) => {
     setRaised(y > 8);
-    if (y > lastY && y > 160) setHidden(true);
-    else setHidden(false);
-    setLastY(y);
   });
 
   return (
     <>
-      <motion.header
-        animate={{ y: hidden ? "-115%" : "0%" }}
-        transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
-        className="fixed top-0 inset-x-0 z-50"
-      >
+      <header className="fixed top-0 inset-x-0 z-50">
         <div
           className={`container-edit flex items-center justify-between transition-all duration-300 ${
             raised ? "py-3" : "py-6"
@@ -85,7 +76,7 @@ export function Nav() {
             </div>
           </div>
         </div>
-      </motion.header>
+      </header>
 
       <AnimatePresence>
         {open ? (
