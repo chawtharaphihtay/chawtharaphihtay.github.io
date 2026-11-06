@@ -28,7 +28,7 @@ export function Nav() {
           <div
             className={`flex items-center justify-between w-full rounded-full border transition-all duration-300 ${
               raised
-                ? "border-line bg-paper/85 backdrop-blur-md px-4 py-2 shadow-[0_1px_0_0_var(--line)]"
+                ? "border-line bg-paper/70 backdrop-blur-xl px-4 py-2 shadow-[0_1px_0_0_var(--line)]"
                 : "border-transparent px-3 py-1.5"
             }`}
           >
