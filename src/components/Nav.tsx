@@ -5,10 +5,12 @@ import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { nav, personal } from "@/content/data";
 import { ThemeToggle } from "./ThemeToggle";
+import { useActiveSection } from "./useActiveSection";
 
 export function Nav() {
   const [raised, setRaised] = useState(false);
   const [open, setOpen] = useState(false);
+  const activeId = useActiveSection();
   const { scrollY } = useScroll();
 
   useMotionValueEvent(scrollY, "change", (y) => {
@@ -26,7 +28,7 @@ export function Nav() {
           <div
             className={`flex items-center justify-between w-full rounded-full border transition-all duration-300 ${
               raised
-                ? "border-line bg-paper/85 backdrop-blur-md px-4 py-2 shadow-[0_1px_0_0_var(--line)]"
+                ? "border-line bg-paper/70 backdrop-blur-xl px-4 py-2 shadow-[0_1px_0_0_var(--line)]"
                 : "border-transparent px-3 py-1.5"
             }`}
           >
@@ -41,15 +43,27 @@ export function Nav() {
             </a>
 
             <nav className="hidden md:flex items-center gap-8" aria-label="Primary">
-              {nav.map((item) => (
-                <a
-                  key={item.href}
-                  href={item.href}
-                  className="text-sm text-ink-soft hover:text-ink transition-colors"
-                >
-                  {item.label}
-                </a>
-              ))}
+              {nav.map((item) => {
+                const active = activeId === item.href.slice(1);
+                return (
+                  <a
+                    key={item.href}
+                    href={item.href}
+                    aria-current={active ? "true" : undefined}
+                    className={`relative text-sm transition-colors ${
+                      active ? "text-ink" : "text-ink-soft hover:text-ink"
+                    }`}
+                  >
+                    {item.label}
+                    {active ? (
+                      <span
+                        aria-hidden="true"
+                        className="absolute -bottom-2 left-1/2 h-1.5 w-1.5 -translate-x-1/2 rounded-full bg-accent"
+                      />
+                    ) : null}
+                  </a>
+                );
+              })}
             </nav>
 
             <div className="hidden md:flex items-center gap-3">
@@ -90,19 +104,31 @@ export function Nav() {
               className="flex h-full flex-col justify-center gap-6 px-8"
               aria-label="Mobile"
             >
-              {nav.map((item, i) => (
-                <motion.a
-                  key={item.href}
-                  href={item.href}
-                  onClick={() => setOpen(false)}
-                  initial={{ opacity: 0, y: 12 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.05 * i }}
-                  className="font-display text-4xl"
-                >
-                  {item.label}
-                </motion.a>
-              ))}
+              {nav.map((item, i) => {
+                const active = activeId === item.href.slice(1);
+                return (
+                  <motion.a
+                    key={item.href}
+                    href={item.href}
+                    onClick={() => setOpen(false)}
+                    initial={{ opacity: 0, y: 12 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.05 * i }}
+                    aria-current={active ? "true" : undefined}
+                    className={`font-display text-4xl ${
+                      active ? "text-ink" : "text-ink-soft"
+                    }`}
+                  >
+                    {active ? (
+                      <span
+                        aria-hidden="true"
+                        className="mr-3 inline-block h-2.5 w-2.5 rounded-full bg-accent align-middle"
+                      />
+                    ) : null}
+                    {item.label}
+                  </motion.a>
+                );
+              })}
               <motion.a
                 href="#contact"
                 onClick={() => setOpen(false)}
